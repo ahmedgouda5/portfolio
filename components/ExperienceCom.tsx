@@ -11,13 +11,13 @@ const ExperienceCom = () => {
     },
     {
       name: "Mindset Training",
-      Image: "/mindset.jpg",
+      Image: "/Mindset.jpg",
       description:
         "Joined a structured frontend program focused on React.js, UI/UX basics, and best practices through theoretical training.",
     },
     {
       name: "Route",
-      Image: "/route.png",
+      Image: "/Route.png",
       description:
         "Completed a full frontend track at Route Academy covering JavaScript, TypeScript, SASS, React.js ,Next.js, and Git, with real-world projects.",
     },
@@ -25,7 +25,6 @@ const ExperienceCom = () => {
 
   return (
     <div className="flex flex-col items-center my-10 gap-16 px-4">
-      {/* Timeline */}
       <div className="flex flex-col items-start gap-12">
         {experiences.map((exp, index) => (
           <div key={index} className="flex items-start gap-6 relative">
