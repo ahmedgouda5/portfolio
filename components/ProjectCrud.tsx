@@ -6,8 +6,8 @@ const ProjectsSection = () => {
   {
     name: "Ecommerce",
     image: "/Ecommerce.png",
-    liveDemo: "https://ahmedgouda5.github.io/Ecommerce/",
-    code: "https://github.com/ahmedgouda5/Ecommerce",
+    liveDemo: "https://fresh-cart-rho-ten.vercel.app/auth/Login",
+    code: "https://github.com/ahmedgouda5/FreshCart",
     title: "Modern E-commerce platform built with React.js and Tailwind CSS",
   },
   {
