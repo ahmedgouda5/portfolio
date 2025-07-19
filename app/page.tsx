@@ -8,11 +8,11 @@ import Skills from "./(pages)/Skills/page";
 
 export default function Home() {
   return (
-    <div className="container pt-4  ">
-      <nav>
+    <div>
+      <nav className="container pt-4 ">
         <Navbar />
       </nav>
-      <main>
+      <main className="container pt-4 ">
         <section className="pt-10">
           <ParticlesBackground />
           <Info />
@@ -21,15 +21,18 @@ export default function Home() {
           <Projects />
         </section>
         <section id="Experience">
-          <Experience/>
+          <Experience />
         </section>
         <section id="Skills">
-          <Skills/>
+          <Skills />
         </section>
         <section id="Contact">
-          <Contact/>
+          <Contact />
         </section>
       </main>
+      <footer className="flex justify-center py-3 bg-gray-300 dark:bg-black shadow-inner ">
+        <h1>© 2025 Ahmed Gouda. All rights reserved.</h1>
+      </footer>
     </div>
   );
 }

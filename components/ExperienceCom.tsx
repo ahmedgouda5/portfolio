@@ -1,25 +1,25 @@
-import { FaMeta, FaMicrosoft } from "react-icons/fa6";
-import { FcGoogle } from "react-icons/fc";
+import Image from "next/image";
 import { FaDownload } from "react-icons/fa";
 
 const ExperienceCom = () => {
   const experiences = [
     {
-      name: "Google",
-      logo: <FcGoogle className="text-3xl" />,
-      description: "I learned scalable frontend coding and team collaboration.",
+      name: "Tech-CELL",
+      Image: "/Techcell.jpg",
+      description:
+        "Frontend trainee at Tech Cell, where I built responsive interfaces with React.js and collaborated remotely using GitHub.",
     },
     {
-      name: "Microsoft",
-      logo: (
-        <FaMicrosoft className="text-3xl text-blue-700 dark:text-blue-400" />
-      ),
-      description: "Improved problem-solving and built accessible web apps.",
+      name: "Mindset Training",
+      Image: "/mindset.jpg",
+      description:
+        "Joined a structured frontend program focused on React.js, UI/UX basics, and best practices through theoretical training.",
     },
     {
-      name: "Meta",
-      logo: <FaMeta className="text-3xl text-blue-600 dark:text-blue-300" />,
-      description: "Worked on real-time React features and system design.",
+      name: "Route",
+      Image: "/route.png",
+      description:
+        "Completed a full frontend track at Route Academy covering JavaScript, TypeScript, SASS, React.js ,Next.js, and Git, with real-world projects.",
     },
   ];
 
@@ -30,8 +30,14 @@ const ExperienceCom = () => {
         {experiences.map((exp, index) => (
           <div key={index} className="flex items-start gap-6 relative">
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full border-2 border-black dark:border-white flex items-center justify-center bg-white dark:bg-black z-10">
-                {exp.logo}
+              <div className="w-16 h-16 rounded-full border-2 border-black dark:border-white flex items-center justify-center bg-white dark:bg-black overflow-hidden z-10">
+                <Image
+                  src={exp.Image}
+                  alt={exp.name}
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
               </div>
               {index !== experiences.length - 1 && (
                 <div className="w-1 h-24 mt-5 bg-black dark:bg-white rounded-md" />
@@ -57,8 +63,8 @@ const ExperienceCom = () => {
         </p>
         <a
           href="https://drive.google.com/file/d/1LrU_GYQBhbKsbCBXUv96mARxDq09js6Z/view?usp=drive_link"
-          target="_blank "
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition"
         >
           <FaDownload /> Download CV

@@ -3,6 +3,6 @@ export enum PagesNavbar {
   Contact = "#Contact",
   skills = "#Skills",
   Experience = "#Experience",
-  HireMe = "#HireMe",
+  HireMe = "#Contact",
 }
 

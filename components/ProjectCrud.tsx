@@ -1,86 +1,98 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ProjectsSection = () => {
-  const projects = [
-    {
-      name: "Ecommerce",
-      image: "/projects/ecommerce.jpg",
-      liveDemo: "https://ahmedgouda5.github.io/Ecommerce/",
-      title: "Modern E-commerce platform built with Next.js and Tailwind CSS",
-    },
-    {
-      name: "ChatGPT Clone",
-      image: "/projects/chatgpt-clone.jpg",
-      liveDemo: "https://chatgpt-clone-demo.vercel.app",
-      title: "AI-powered chatbot interface using React and OpenAI API",
-    },
-    {
-      name: "Weather App",
-      image: "/projects/weather-app.jpg",
-      liveDemo: "https://weather-leigh.vercel.app",
-      title: "Weather forecast app with animated UI using Tailwind",
-    },
-    {
-      name: "Admin Dashboard",
-      image: "/projects/admin-dashboard.jpg",
-      liveDemo: "https://admin-dashboard-leigh.vercel.app",
-      title: "Dashboard to manage users and reports",
-    },
-    {
-      name: "Portfolio Website",
-      image: "/projects/portfolio.jpg",
-      liveDemo: "https://leigh-portfolio.vercel.app",
-      title: "Personal portfolio to showcase skills and work",
-    },
-  ];
+ const projects = [
+  {
+    name: "Ecommerce",
+    image: "/Ecommerce.png",
+    liveDemo: "https://ahmedgouda5.github.io/Ecommerce/",
+    code: "https://github.com/ahmedgouda5/Ecommerce",
+    title: "Modern E-commerce platform built with React.js and Tailwind CSS",
+  },
+  {
+    name: "FoodOrderingApp",
+    image: "/Foodorderingapp.png",
+    liveDemo: "https://food-ordering-app-three-roan.vercel.app/",
+    code: "https://github.com/ahmedgouda5/food-ordering-app", // مثال
+    title: "Pizza ordering application with cart system and real-time updates",
+  },
+  {
+    name: "Unique",
+    image: "/nique.png",
+    liveDemo: "https://round-4-upperclass-restaurant-front.vercel.app/",
+    code: "https://github.com/ahmedgouda5/round-4-upperclass-restaurant-front", // مثال
+    title: "Restaurant reservation system with table booking and menu preview",
+  },
+  {
+    name: "Mealify",
+    image: "/Mealify.png",
+    liveDemo: "https://ahmedgouda5.github.io/Mealify/",
+    code: "https://github.com/ahmedgouda5/Mealify", // مثال
+    title: "Responsive restaurant website built with HTML and Bootstrap",
+  },
+  {
+    name: "Yummy",
+    image: "/Yummy.png",
+    liveDemo: "https://yummy-snowy-nine.vercel.app/",
+    code: "https://github.com/ahmedgouda5/Yummy", // مثال
+    title:
+      "Explore traditional dishes from around the world with YouTube cooking videos",
+  },
+];
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {projects.map((project, index) => (
         <div
           key={index}
-          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg 
-            dark:bg-black dark:border-gray-700 transition-colors"
+          className="flex flex-col h-full bg-white border border-gray-200 rounded-lg shadow-lg 
+        dark:bg-black dark:border-gray-700 transition-colors"
         >
-          <Image
-            src={ "/shoes.jpg"}
-            width={400}
-            height={300}
-            alt={project.name}
-            className="rounded-t-lg w-full h-auto object-cover"
-          />
-          <div className="p-5">
-            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {project.name}
-            </h5>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              {project.title}
-            </p>
-            <a
-              href={project.liveDemo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-white 
-                bg-gray-700 rounded-lg hover:bg-gray-400
-                focus:ring-4 focus:outline-none focus:ring-blue-300 
-                 dark:hover:bg-gray-400 dark:focus:ring-blue-800"
-            >
-              Live Demo
-              <svg
-                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
+          <div className="w-full h-52 relative">
+            <Image
+              src={project.image}
+              alt={project.name}
+              fill
+              className="object-cover rounded-t-lg"
+            />
+          </div>
+
+          <div className="flex flex-col flex-grow p-5 justify-between">
+            <div>
+              <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                {project.name}
+              </h5>
+              <p className="mb-4 font-normal text-gray-700 dark:text-gray-400">
+                {project.title}
+              </p>
+            </div>
+
+            <div className="flex justify-between gap-4 mt-4">
+              <Link
+                href={project.code}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-fit inline-flex items-center px-4 py-2 text-sm font-medium text-white 
+      bg-gray-700 rounded-lg hover:bg-gray-500
+      focus:ring-4 focus:outline-none focus:ring-blue-300 
+      dark:hover:bg-gray-600 dark:focus:ring-blue-800"
               >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </a>
+                Code
+              </Link>
+
+              <Link
+                href={project.liveDemo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-fit inline-flex items-center px-4 py-2 text-sm font-medium text-white 
+      bg-green-700 rounded-lg hover:bg-green-600
+      focus:ring-4 focus:outline-none focus:ring-green-300 
+      dark:hover:bg-green-600 dark:focus:ring-green-800"
+              >
+                Live Demo
+              </Link>
+            </div>
           </div>
         </div>
       ))}
