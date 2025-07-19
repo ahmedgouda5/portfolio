@@ -6,25 +6,30 @@ const ExperienceCom = () => {
     {
       name: "Tech-CELL",
       Image: "/Techcell.jpg",
-      description:
-        "Frontend trainee at Tech Cell, where I built responsive interfaces with React.js and collaborated remotely using GitHub.",
+      description:"As a Frontend Developer trainee at Tech Cell, I gained hands-on experience in building responsive and interactive user interfaces using React.js. This internship marked my first real-world exposure to team-based development, where I collaborated remotely with other developers using GitHub for version control and task management."
     },
     {
       name: "Mindset Training",
       Image: "/Mindset.jpg",
       description:
-        "Joined a structured frontend program focused on React.js, UI/UX basics, and best practices through theoretical training.",
+        "As a trainee in the Frontend Development Program at Mindset, I deepened my understanding of modern front-end technologies with a strong focus on theoretical foundations and structured learning. This training emphasized conceptual clarity and best practices, helping me build a solid base in React.js, UI/UX principles, and front-end workflows.",
     },
     {
       name: "Route",
       Image: "/Route.png",
-      description:
-        "Completed a full frontend track at Route Academy covering JavaScript, TypeScript, SASS, React.js ,Next.js, and Git, with real-world projects.",
+      description:`During my training at Route Academy, I completed a comprehensive Frontend Development track where I built a strong foundation in both core and modern web technologies.
+I learned how to create dynamic and interactive websites using JavaScript and enhanced code quality through TypeScript.
+I mastered styling techniques using SASS and CSS3, allowing for modular and maintainable UI designs.
+I built Single Page Applications (SPAs) using React.js, following component-based architecture and real-world structure.
+The course covered essential concepts like OOP, DOM manipulation, and responsive design principles.
+I also practiced version control with Git/GitHub and worked on real-world projects that simulate actual frontend development tasks.
+By the end of the training, I became confident in turning UI/UX designs into functional, responsive, and accessible web interfaces`
     },
   ];
 
   return (
     <div className="flex flex-col items-center my-10 gap-16 px-4">
+      {/* Timeline */}
       <div className="flex flex-col items-start gap-12">
         {experiences.map((exp, index) => (
           <div key={index} className="flex items-start gap-6 relative">

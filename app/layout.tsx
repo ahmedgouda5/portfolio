@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ClientOnly from "@/components/ClientOnly"; // 🆕
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "Ahmed Gouda | software engineer",
+  title: "Ahmed Gouda | software developer",
   description: "My portfolio website",
 };
 
@@ -15,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body >
+      <body>
         <ClientOnly>
           <ThemeProvider
             attribute="class"
@@ -24,6 +25,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            <Toaster />
           </ThemeProvider>
         </ClientOnly>
       </body>
