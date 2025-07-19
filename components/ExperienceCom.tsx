@@ -66,7 +66,7 @@ By the end of the training, I became confident in turning UI/UX designs into fun
           Check out my full CV below.
         </p>
         <a
-          href="https://drive.google.com/file/d/1LrU_GYQBhbKsbCBXUv96mARxDq09js6Z/view?usp=drive_link"
+          href="https://drive.google.com/file/d/15lQS-oi7Si2S-XvdVfk7UMCwI1exphbe/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition"
