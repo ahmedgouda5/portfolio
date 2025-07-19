@@ -11,7 +11,9 @@ const ContactCom = () => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -19,17 +21,20 @@ const ContactCom = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://formsubmit.co/ahmedgodaiii029@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          _captcha: false,
-        }),
-      });
+      const res = await fetch(
+        "https://formsubmit.co/ahmedgodaiii029@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            ...formData,
+            _captcha: false,
+          }),
+        }
+      );
 
       if (res.ok) {
         toast({
@@ -46,6 +51,8 @@ const ContactCom = () => {
         });
       }
     } catch (err) {
+      console.log(err);
+
       toast({
         title: "Network Error",
         description: "Check your internet connection.",
@@ -58,7 +65,10 @@ const ContactCom = () => {
     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <form onSubmit={handleSubmit} className="space-y-8">
         <div>
-          <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+          <label
+            htmlFor="email"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >
             Your email
           </label>
           <input
@@ -76,7 +86,10 @@ const ContactCom = () => {
         </div>
 
         <div>
-          <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+          <label
+            htmlFor="subject"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >
             Subject
           </label>
           <input
@@ -94,7 +107,10 @@ const ContactCom = () => {
         </div>
 
         <div className="sm:col-span-2">
-          <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+          <label
+            htmlFor="message"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+          >
             Your message
           </label>
           <textarea
