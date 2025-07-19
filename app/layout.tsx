@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import ClientOnly from "@/components/ClientOnly"; // 🆕
 
 export const metadata: Metadata = {
-  title: "Ahmed Gouda | software engineer",
+  title: "Ahmed Gouda | software Developer",
   description: "My portfolio website",
 };
 
