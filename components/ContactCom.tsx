@@ -7,7 +7,7 @@ const ContactCom = () => {
     className="space-y-8"
   >
     <input type="hidden" name="_captcha" value="false" />
-    <input type="hidden" name="_next" value="https://yourdomain.com/thanks" />
+<input type="hidden" name="_next" value="https://portfolio-two-lemon-69.vercel.app/" />
 
     <div>
       <label
