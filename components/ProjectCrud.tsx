@@ -6,7 +6,7 @@ const ProjectsSection = () => {
   {
     name: "Ecommerce",
     image: "/Ecommerce.png",
-    liveDemo: "https://ecommerce-mxh35imag-ahmedgouda5s-projects.vercel.app/login",
+    liveDemo: "https://ecommerce-psi-beige.vercel.app/#/login",
     code: "https://github.com/ahmedgouda5/Ecommerce",
     title: "Modern E-commerce platform built with React.js and Tailwind CSS",
   },
