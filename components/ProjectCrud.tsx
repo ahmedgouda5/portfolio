@@ -6,9 +6,16 @@ const ProjectsSection = () => {
   {
     name: "Ecommerce",
     image: "/Ecommerce.png",
-    liveDemo: "https://ahmedgouda5.github.io/Ecommerce/",
+    liveDemo: "https://ecommerce-psi-beige.vercel.app/#/login",
     code: "https://github.com/ahmedgouda5/Ecommerce",
     title: "Modern E-commerce platform built with React.js and Tailwind CSS",
+  },
+  {
+    name: "CartZilla",
+    image: "/furniture.png",
+    liveDemo: "https://cartzilla-topaz.vercel.app/",
+    code: "https://github.com/ahmedgouda5/cartzilla",
+    title: "A modern website built using Next.js, designed to showcase a variety of furniture products in an elegant and responsive layout."
   },
   {
     name: "FoodOrderingApp",
