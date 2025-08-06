@@ -6,7 +6,8 @@ const ExperienceCom = () => {
     {
       name: "Tech-CELL",
       Image: "/Techcell.jpg",
-      description:"As a Frontend Developer trainee at Tech Cell, I gained hands-on experience in building responsive and interactive user interfaces using React.js. This internship marked my first real-world exposure to team-based development, where I collaborated remotely with other developers using GitHub for version control and task management."
+      description:
+        "As a Frontend Developer trainee at Tech Cell, I gained hands-on experience in building responsive and interactive user interfaces using React.js. This internship marked my first real-world exposure to team-based development, where I collaborated remotely with other developers using GitHub for version control and task management.",
     },
     {
       name: "Mindset Training",
@@ -17,13 +18,13 @@ const ExperienceCom = () => {
     {
       name: "Route",
       Image: "/Route.png",
-      description:`During my training at Route Academy, I completed a comprehensive Frontend Development track where I built a strong foundation in both core and modern web technologies.
+      description: `During my training at Route Academy, I completed a comprehensive Frontend Development track where I built a strong foundation in both core and modern web technologies.
 I learned how to create dynamic and interactive websites using JavaScript and enhanced code quality through TypeScript.
 I mastered styling techniques using SASS and CSS3, allowing for modular and maintainable UI designs.
 I built Single Page Applications (SPAs) using React.js, following component-based architecture and real-world structure.
 The course covered essential concepts like OOP, DOM manipulation, and responsive design principles.
 I also practiced version control with Git/GitHub and worked on real-world projects that simulate actual frontend development tasks.
-By the end of the training, I became confident in turning UI/UX designs into functional, responsive, and accessible web interfaces`
+By the end of the training, I became confident in turning UI/UX designs into functional, responsive, and accessible web interfaces`,
     },
   ];
 

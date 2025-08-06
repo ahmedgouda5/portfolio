@@ -2,54 +2,44 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ProjectsSection = () => {
-  const projects = [
-    {
-      name: "Ecommerce",
-      image: "/Ecommerce.png",
-      liveDemo: "https://ecommerce-psi-beige.vercel.app/#/login",
-      code: "https://github.com/ahmedgouda5/Ecommerce",
-      title: "Modern E-commerce platform built with React.js and Tailwind CSS",
-    },
-    {
-      name: "CartZila",
-      image: "/furniture.png",
-      liveDemo: "https://cartzilla-topaz.vercel.app/",
-      code: "https://github.com/ahmedgouda5/cartzilla",
-      title:
-        "A modern website built using Next.js, designed to showcase a variety of furniture products in an elegant and responsive layout.",
-    },
-    {
-      name: "FoodOrderingApp",
-      image: "/Foodorderingapp.png",
-      liveDemo: "https://food-ordering-app-three-roan.vercel.app/",
-      code: "https://github.com/ahmedgouda5/food-ordering-app", // مثال
-      title:
-        "Pizza ordering application with cart system and real-time updates",
-    },
-    {
-      name: "Unique",
-      image: "/nique.png",
-      liveDemo: "https://round-4-upperclass-restaurant-front.vercel.app/",
-      code: "https://github.com/ahmedgouda5/round-4-upperclass-restaurant-front", // مثال
-      title:
-        "Restaurant reservation system with table booking and menu preview",
-    },
-    {
-      name: "Mealify",
-      image: "/Mealify.png",
-      liveDemo: "https://ahmedgouda5.github.io/Mealify/",
-      code: "https://github.com/ahmedgouda5/Mealify", // مثال
-      title: "Responsive restaurant website built with HTML and Bootstrap",
-    },
-    {
-      name: "Yummy",
-      image: "/Yummy.png",
-      liveDemo: "https://yummy-snowy-nine.vercel.app/",
-      code: "https://github.com/ahmedgouda5/Yummy", // مثال
-      title:
-        "Explore traditional dishes from around the world with YouTube cooking videos",
-    },
-  ];
+ const projects = [
+  {
+    name: "Ecommerce",
+    image: "/Ecommerce.png",
+    liveDemo: "https://ahmedgouda5.github.io/Ecommerce/",
+    code: "https://github.com/ahmedgouda5/Ecommerce",
+    title: "Modern E-commerce platform built with React.js and Tailwind CSS",
+  },
+  {
+    name: "FoodOrderingApp",
+    image: "/Foodorderingapp.png",
+    liveDemo: "https://food-ordering-app-three-roan.vercel.app/",
+    code: "https://github.com/ahmedgouda5/food-ordering-app", // مثال
+    title: "Pizza ordering application with cart system and real-time updates",
+  },
+  {
+    name: "Unique",
+    image: "/nique.png",
+    liveDemo: "https://round-4-upperclass-restaurant-front.vercel.app/",
+    code: "https://github.com/ahmedgouda5/round-4-upperclass-restaurant-front", // مثال
+    title: "Restaurant reservation system with table booking and menu preview",
+  },
+  {
+    name: "Mealify",
+    image: "/Mealify.png",
+    liveDemo: "https://ahmedgouda5.github.io/Mealify/",
+    code: "https://github.com/ahmedgouda5/Mealify", // مثال
+    title: "Responsive restaurant website built with HTML and Bootstrap",
+  },
+  {
+    name: "Yummy",
+    image: "/Yummy.png",
+    liveDemo: "https://yummy-snowy-nine.vercel.app/",
+    code: "https://github.com/ahmedgouda5/Yummy", // مثال
+    title:
+      "Explore traditional dishes from around the world with YouTube cooking videos",
+  },
+];
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
