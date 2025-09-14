@@ -18,13 +18,7 @@ const ExperienceCom = () => {
     {
       name: "Route",
       Image: "/Route.png",
-      description: `During my training at Route Academy, I completed a comprehensive Frontend Development track where I built a strong foundation in both core and modern web technologies.
-I learned how to create dynamic and interactive websites using JavaScript and enhanced code quality through TypeScript.
-I mastered styling techniques using SASS and CSS3, allowing for modular and maintainable UI designs.
-I built Single Page Applications (SPAs) using React.js, following component-based architecture and real-world structure.
-The course covered essential concepts like OOP, DOM manipulation, and responsive design principles.
-I also practiced version control with Git/GitHub and worked on real-world projects that simulate actual frontend development tasks.
-By the end of the training, I became confident in turning UI/UX designs into functional, responsive, and accessible web interfaces`,
+      description: `Completed a Frontend Development track at Route Academy, gaining hands-on experience with JavaScript, TypeScript, React.js, and modern styling (CSS3/SASS). Built responsive SPAs and practiced version control with Git/GitHub through real-world projects.`,
     },
   ];
 
@@ -67,7 +61,7 @@ By the end of the training, I became confident in turning UI/UX designs into fun
           Check out my full CV below.
         </p>
         <a
-          href="https://drive.google.com/file/d/1FT8CS_OzXlLvuZ29X9NFb4LaBxFcVRcp/view?usp=drive_link"
+          href="https://drive.google.com/file/d/10ql1a7fayEbfvwDpwIBRGvIIxOeiRoM4/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition"

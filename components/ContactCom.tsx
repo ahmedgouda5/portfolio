@@ -21,27 +21,22 @@ const ContactCom = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch(
-        "https://formsubmit.co/ahmedgodaiii029@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            ...formData,
-            _captcha: false,
-          }),
-        }
-      );
+      const body = new FormData();
+      body.append("email", formData.email);
+      body.append("subject", formData.subject);
+      body.append("message", formData.message);
+      body.append("_captcha", "false");
+
+      const res = await fetch("https://formsubmit.co/ahmedgodaiii029@gmail.com", {
+        method: "POST",
+        body,
+      });
 
       if (res.ok) {
         toast({
           title: "Message Sent ✅",
           description: "Your message was submitted successfully.",
         });
-
         setFormData({ email: "", subject: "", message: "" });
       } else {
         toast({
@@ -51,8 +46,7 @@ const ContactCom = () => {
         });
       }
     } catch (err) {
-      console.log(err);
-
+      console.error(err);
       toast({
         title: "Network Error",
         description: "Check your internet connection.",

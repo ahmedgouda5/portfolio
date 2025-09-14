@@ -8,7 +8,7 @@ import Skills from "./(pages)/Skills/page";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <nav className="container pt-4 ">
         <Navbar />
       </nav>
