@@ -25,7 +25,8 @@ const ContactCom = () => {
       body.append("email", formData.email);
       body.append("subject", formData.subject);
       body.append("message", formData.message);
-      body.append("_captcha", "false");
+      body.append("_captcha", "false"); // عطل الكابتشا
+      body.append("_next", window.location.href); // يرجع لنفس الصفحة
 
       const res = await fetch("https://formsubmit.co/ahmedgodaiii029@gmail.com", {
         method: "POST",
@@ -36,6 +37,7 @@ const ContactCom = () => {
         toast({
           title: "Message Sent ✅",
           description: "Your message was submitted successfully.",
+          duration: 2000,
         });
         setFormData({ email: "", subject: "", message: "" });
       } else {
@@ -43,6 +45,7 @@ const ContactCom = () => {
           title: "Error 😢",
           description: "Failed to send message. Try again later.",
           variant: "destructive",
+          duration: 2000,
         });
       }
     } catch (err) {
@@ -51,6 +54,7 @@ const ContactCom = () => {
         title: "Network Error",
         description: "Check your internet connection.",
         variant: "destructive",
+        duration: 2000,
       });
     }
   };
