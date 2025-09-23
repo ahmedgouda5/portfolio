@@ -29,7 +29,7 @@ const Info = () => {
           <li>
             <Link
               target="_blank"
-              href={"https://www.linkedin.com/in/ahmed-gouda-1a0b1b1a4/"}
+              href={"https://www.linkedin.com/in/a7medgouda/"}
             >
               <LinkedInIcon />
             </Link>
