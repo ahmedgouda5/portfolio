@@ -1,11 +1,13 @@
 "use client";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 const ContactCom = () => {
   const { toast } = useToast();
 
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     subject: "",
     message: "",
@@ -21,38 +23,29 @@ const ContactCom = () => {
     e.preventDefault();
 
     try {
-      const body = new FormData();
-      body.append("email", formData.email);
-      body.append("subject", formData.subject);
-      body.append("message", formData.message);
-      body.append("_captcha", "false"); // عطل الكابتشا
-      body.append("_next", window.location.href); // يرجع لنفس الصفحة
-
-      const res = await fetch("https://formsubmit.co/ahmedgodaiii029@gmail.com", {
-        method: "POST",
-        body,
-      });
-
-      if (res.ok) {
+      const res = await emailjs.send(
+        "service_5yctqjr",   // Service ID
+        "template_nww7c4m",  // Template ID
+        {
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "_n4jmlAYmq_fLavnF"  // Public key
+      );
+      if (res.text === "OK") {
         toast({
           title: "Message Sent ✅",
           description: "Your message was submitted successfully.",
           duration: 2000,
         });
-        setFormData({ email: "", subject: "", message: "" });
-      } else {
-        toast({
-          title: "Error 😢",
-          description: "Failed to send message. Try again later.",
-          variant: "destructive",
-          duration: 2000,
-        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
       }
     } catch (err) {
       console.error(err);
       toast({
-        title: "Network Error",
-        description: "Check your internet connection.",
+        title: "Error 😢",
+        description: "Failed to send message. Try again later.",
         variant: "destructive",
         duration: 2000,
       });
@@ -62,6 +55,27 @@ const ContactCom = () => {
   return (
     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <form onSubmit={handleSubmit} className="space-y-8">
+        <div>
+          <label
+            htmlFor="name"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >
+            Your name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            value={formData.name}
+            onChange={handleChange}
+            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+              focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 
+              dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+            placeholder="John Doe"
+          />
+        </div>
+
         <div>
           <label
             htmlFor="email"
